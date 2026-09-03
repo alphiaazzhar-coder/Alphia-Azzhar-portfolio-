@@ -1,348 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Alpha Azzhar | Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alpha Azzhar | Data Analyst</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f9fc;
+  color: #172033;
+  line-height: 1.6;
+}
+
+nav {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #315efb;
+}
+
+.hero {
+  background: white;
+  padding: 100px 25px;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: #315efb;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: #315efb;
+}
+
+.hero p {
+  max-width: 700px;
+  color: #596579;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #315efb;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #315efb;
+  color: #315efb;
+  background: white;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  max-width: 850px;
+  color: #596579;
+  font-size: 17px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background: white;
+  border: 1px solid #dfe4ec;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e9f0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #596579;
+  font-size: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #315efb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.education-card {
+  background: white;
+  padding: 25px;
+  border-left: 4px solid #315efb;
+  border-radius: 8px;
+}
+
+.education-card h3 {
+  margin-bottom: 5px;
+}
+
+.education-card p {
+  color: #596579;
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e5e9f0;
+}
+
+.contact-card p {
+  margin: 10px 0;
+}
+
+.contact-card a {
+  color: #315efb;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  color: #697386;
+}
+
+@media (max-width: 750px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 70px 25px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+
+    <div class="logo">
+      Alpha Azzhar
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<header class="hero">
+
+  <div class="hero-container">
+
+    <div class="tag">
+      DATA ANALYST • FRESHER
+    </div>
+
+    <h1>
+      Hi, I'm <span>Alpha Azzhar</span>.
+    </h1>
+
+    <p>
+      I am an aspiring Data Analyst passionate about turning
+      raw data into meaningful insights using SQL, Excel and
+      data analytics.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#projects" class="button primary">
+        View My Projects
+      </a>
+
+      <a href="mailto:alphiaazzhar@gmail.com"
+         class="button secondary">
+        Contact Me
+      </a>
+
+    </div>
+
+  </div>
 
-    <meta name="description"
-          content="Alpha Azzhar - Data Analyst Fresher skilled in SQL, Microsoft Excel and Data Analytics.">
-
-    <style>
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+</header>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f8fc;
-            color: #172033;
-            line-height: 1.6;
-        }
 
-        a {
-            text-decoration: none;
-        }
+<section id="about">
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+  <h2 class="section-title">
+    About Me
+  </h2>
 
+  <p class="about-text">
 
-        /* =========================
-           NAVBAR
-        ========================= */
+    I am currently pursuing an M.Sc. in Data Science from
+    Shoolini University and have completed my B.Sc. from
+    Lucknow University in 2025.
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+    I am interested in data analytics, business insights,
+    sales analysis and customer analysis.
 
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
+    I enjoy cleaning data, exploring trends, creating
+    dashboards and converting data into useful information
+    for business decision-making.
 
-            border-bottom: 1px solid #e5e7eb;
-        }
+  </p>
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+</section>
 
-            padding: 18px 0;
-        }
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #5b5bd6;
-        }
+<section id="skills">
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
+  <h2 class="section-title">
+    Skills
+  </h2>
 
-        .nav-links a {
-            color: #374151;
-            font-weight: 600;
-            font-size: 14px;
-        }
+  <div class="skills">
 
-        .nav-links a:hover {
-            color: #5b5bd6;
-        }
+    <span class="skill">SQL</span>
+    <span class="skill">MySQL</span>
+    <span class="skill">Microsoft Excel</span>
+    <span class="skill">Data Cleaning</span>
+    <span class="skill">Data Analysis</span>
+    <span class="skill">Exploratory Data Analysis</span>
+    <span class="skill">Sales Analysis</span>
+    <span class="skill">Customer Analysis</span>
+    <span class="skill">KPI Analysis</span>
 
+    <span class="skill">SUM</span>
+    <span class="skill">SUMIFS</span>
+    <span class="skill">COUNTIFS</span>
+    <span class="skill">IF</span>
+    <span class="skill">IFERROR</span>
+    <span class="skill">XLOOKUP</span>
+    <span class="skill">INDEX + MATCH</span>
 
-        /* =========================
-           HERO
-        ========================= */
+    <span class="skill">Pivot Tables</span>
+    <span class="skill">Pivot Charts</span>
+    <span class="skill">Slicers</span>
+    <span class="skill">Excel Dashboards</span>
 
-        .hero {
-            min-height: 90vh;
+    <span class="skill">JOINs</span>
+    <span class="skill">CASE</span>
+    <span class="skill">Subqueries</span>
+    <span class="skill">CTEs</span>
+    <span class="skill">Window Functions</span>
 
-            display: flex;
-            align-items: center;
+  </div>
 
-            background:
-                radial-gradient(circle at 85% 20%,
-                #e9e7ff,
-                transparent 30%),
+</section>
 
-                radial-gradient(circle at 10% 80%,
-                #e8f1ff,
-                transparent 30%);
-        }
 
-        .hero-content {
-            text-align: center;
-            padding: 80px 0;
-        }
+<section id="projects">
 
-        .badge {
-            display: inline-block;
+  <h2 class="section-title">
+    Projects
+  </h2>
 
-            background: #ecebff;
-            color: #5b5bd6;
+  <div class="projects">
 
-            padding: 8px 18px;
 
-            border-radius: 30px;
+    <div class="project-card">
 
-            font-size: 13px;
-            font-weight: bold;
+      <h3>
+        Sales & Customer Analysis — SQL
+      </h3>
 
-            margin-bottom: 20px;
-        }
+      <p>
 
-        .hero h1 {
-            font-size: clamp(45px, 7vw, 75px);
-            line-height: 1.1;
+        Analyzed sales and customer data using SQL to
+        answer business questions, identify trends and
+        generate meaningful business insights.
 
-            margin-bottom: 20px;
+      </p>
 
-            letter-spacing: -2px;
-        }
+      <a
+        href="https://github.com/alphiaazzhar-coder/sales-analytics"
+        target="_blank"
+        class="project-link">
 
-        .hero h1 span {
-            color: #5b5bd6;
-        }
+        View Project on GitHub →
 
-        .hero h2 {
-            font-size: 25px;
-            margin-bottom: 20px;
-            color: #374151;
-        }
+      </a>
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
+    </div>
 
-            color: #64748b;
-            font-size: 18px;
-        }
 
-        .buttons {
-            margin-top: 30px;
-        }
+    <div class="project-card">
 
-        .btn {
-            display: inline-block;
+      <h3>
+        Sales & Customer Analysis Dashboard — Excel
+      </h3>
 
-            padding: 13px 22px;
+      <p>
 
-            margin: 6px;
+        Created an interactive Excel dashboard using
+        formulas, Pivot Tables, Pivot Charts and slicers
+        to analyze sales performance and key business KPIs.
 
-            border-radius: 10px;
+      </p>
 
-            font-weight: bold;
+      <a
+        href="https://github.com/alphiaazzhar-coder/Sales-analytics-using-excel"
+        target="_blank"
+        class="project-link">
 
-            transition: 0.3s;
-        }
+        View Project on GitHub →
 
-        .primary-btn {
-            background: #5b5bd6;
-            color: white;
-        }
+      </a>
 
-        .secondary-btn {
-            background: white;
-            color: #5b5bd6;
+    </div>
 
-            border: 1px solid #ddd;
-        }
 
-        .btn:hover {
-            transform: translateY(-3px);
-        }
+    <div class="project-card">
 
+      <h3>
+        Data Analytics Practice
+      </h3>
 
-        /* =========================
-           SECTIONS
-        ========================= */
+      <p>
 
-        section {
-            padding: 90px 0;
-        }
+        Continuously developing practical skills in
+        data cleaning, analysis, visualization and
+        business-focused reporting.
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+      </p>
 
-        .section-title h2 {
-            font-size: 38px;
-        }
+      <a
+        href="https://github.com/alphiaazzhar-coder"
+        target="_blank"
+        class="project-link">
 
-        .section-title p {
-            color: #64748b;
-            margin-top: 8px;
-        }
+        View GitHub Profile →
 
+      </a>
 
-        /* =========================
-           ABOUT
-        ========================= */
+    </div>
 
-        .about-card {
-            background: white;
 
-            padding: 35px;
+  </div>
 
-            border-radius: 20px;
+</section>
 
-            border: 1px solid #e5e7eb;
 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+<section id="education">
 
-        .about-card p {
-            color: #64748b;
-            font-size: 16px;
-        }
+  <h2 class="section-title">
+    Education
+  </h2>
 
+  <div class="education-card">
 
-        /* =========================
-           SKILLS
-        ========================= */
+    <h3>
+      M.Sc. Data Science
+    </h3>
 
-        .skills-grid {
-            display: grid;
+    <p>
+      Shoolini University — Currently Pursuing
+    </p>
 
-            grid-template-columns:
-                repeat(3, 1fr);
 
-            gap: 22px;
-        }
+    <h3>
+      B.Sc.
+    </h3>
 
-        .skill-card {
-            background: white;
+    <p>
+      University of Lucknow — Completed 2025
+    </p>
 
-            padding: 28px;
+  </div>
 
-            border-radius: 18px;
+</section>
 
-            border: 1px solid #e5e7eb;
 
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.05);
-        }
+<section id="contact">
 
-        .skill-card h3 {
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
+  <h2 class="section-title">
+    Let's Connect
+  </h2>
 
-        .tag {
-            display: inline-block;
+  <div class="contact-card">
 
-            background: #f1f3f8;
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:alphiaazzhar@gmail.com">
+        alphiaazzhar@gmail.com
+      </a>
+    </p>
 
-            color: #374151;
+    <p>
+      <strong>LinkedIn:</strong>
+      <a
+        href="https://www.linkedin.com/in/alphia-bano-82a719321/"
+        target="_blank">
 
-            padding: 7px 11px;
+        LinkedIn Profile
 
-            border-radius: 7px;
+      </a>
+    </p>
 
-            margin: 4px;
+    <p>
+      <strong>GitHub:</strong>
+      <a
+        href="https://github.com/alphiaazzhar-coder"
+        target="_blank">
 
-            font-size: 13px;
-        }
+        GitHub Profile
 
+      </a>
+    </p>
 
-        /* =========================
-           PROJECTS
-        ========================= */
+  </div>
 
-        .projects-grid {
-            display: grid;
+</section>
 
-            grid-template-columns:
-                repeat(2, 1fr);
 
-            gap: 25px;
-        }
+<footer>
 
-        .project-card {
-            background: white;
+  © 2026 Alpha Azzhar · Data Analyst Portfolio
 
-            padding: 30px;
+</footer>
 
-            border-radius: 20px;
 
-            border: 1px solid #e5e7eb;
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.05);
-
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-
-            box-shadow:
-                0 15px 40px rgba(0,0,0,0.10);
-        }
-
-        .project-icon {
-            width: 55px;
-            height: 55px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #ecebff;
-
-            border-radius: 14px;
-
-            font-size: 25px;
-
-            margin-bottom: 20px;
-        }
-
-        .project-card h3 {
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
-
-        .project-card p {
-            color: #64748b;
-        }
-
-        .project-card ul {
-            margin: 18px 0;
-
-           
+</body>
+</html>
